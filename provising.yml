@@ -1,0 +1,18 @@
+---
+- hosts: all
+  tasks:
+    - name: "Instala dependências para o php"
+      apt:
+        name: 
+        - php
+        - apache2
+        - libapache2-mod-php
+        - php-gd
+        - php-mcrypt
+        - mysql-server
+        - php-mysql
+        state: latest
+      become: yes
+    - name: "cria o banco de dados MySQL"
+      
+ 
